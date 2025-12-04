@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: diabetes-api
-        image: nkcelestin05/diabetes-prediction-model:v1
+        image: nkcelestin05/diabetes-prediction-model:latest
         ports:
         - containerPort: 8000
         imagePullPolicy: Always
