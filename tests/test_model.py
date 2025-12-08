@@ -1,5 +1,5 @@
 import pytest
-import pickle
+import joblib
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
@@ -7,8 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 @pytest.fixture
 def model():
     """Load the trained model."""
-    with open('diabetes_model.pkl', 'rb') as f:
-        return pickle.load(f)
+    return joblib.load('diabetes_model.pkl')
 
 
 def test_model_exists():

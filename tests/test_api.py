@@ -23,7 +23,7 @@ def test_metrics_endpoint():
     """Test the metrics endpoint."""
     response = client.get("/metrics")
     assert response.status_code == 200
-    assert "prediction_requests_total" in response.text
+    assert "diabetes_predictions_total" in response.text
 
 
 def test_predict_valid_input():
