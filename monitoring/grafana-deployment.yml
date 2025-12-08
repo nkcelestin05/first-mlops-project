@@ -19,6 +19,13 @@ spec:
         ports:
         - containerPort: 3000
           name: web
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
         env:
         - name: GF_SECURITY_ADMIN_PASSWORD
           value: "admin"
